@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📝 Advanced To-Do List</h1>
+
+    <div class="top-bar">
+        <button id="themeBtn">🌙 Dark Mode</button>
+    </div>
+
+    <div class="input-box">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter your task">
+
+        <input
+            type="date"
+            id="dueDate">
+
+        <select id="priority">
+            <option value="High">🔴 High</option>
+            <option value="Medium">🟡 Medium</option>
+            <option value="Low">🟢 Low</option>
+        </select>
+
+        <button onclick="addTask()">Add Task</button>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search task..."
+            onkeyup="searchTask()">
+
+    </div>
+
+    <div class="filters">
+
+        <button onclick="filterTasks('all')">All</button>
+
+        <button onclick="filterTasks('active')">Active</button>
+
+        <button onclick="filterTasks('completed')">Completed</button>
+
+    </div>
+
+    <ul id="taskList">
+
+    </ul>
+
+    <div class="summary">
+
+        <h3>Task Summary</h3>
+
+        <p>Total Tasks :
+            <span id="total">0</span>
+        </p>
+
+        <p>Completed :
+            <span id="completed">0</span>
+        </p>
+
+        <p>Pending :
+            <span id="pending">0</span>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
